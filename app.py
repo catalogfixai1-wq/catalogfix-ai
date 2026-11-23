@@ -50,6 +50,20 @@ if upload is not None:
     b.metric('Products with issues', int(df['issue_count'].gt(0).sum()))
     c.metric('Total issues found', int(df['issue_count'].sum()))
     st.subheader('Audit results')
+    st.markdown("### 🔍 Detailed Issue Breakdown")
+    issue_labels = {
+        "missing_sku": "Missing product IDs",
+        "duplicate_sku": "Duplicate SKUs",
+        "missing_title": "Missing product titles",
+        "missing_description": "Missing descriptions",
+        "invalid_price": "Invalid prices"
+    }
+
+    for column, label in issue_labels.items():
+        count = int(df[column].sum())
+        if count > 0:
+            st.warning(f"{label}: {count}")
+   
     st.dataframe(df, use_container_width=True)
     st.download_button('Download audit CSV', df.to_csv(index=False).encode('utf-8-sig'), 'catalogfix_audit.csv', 'text/csv')
     st.caption('Checks are rule-based. Prices are assumed to be in a consistent currency; no currency conversion is performed.')

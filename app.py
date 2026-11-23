@@ -67,3 +67,18 @@ if upload is not None:
     st.dataframe(df, use_container_width=True)
     st.download_button('Download audit CSV', df.to_csv(index=False).encode('utf-8-sig'), 'catalogfix_audit.csv', 'text/csv')
     st.caption('Checks are rule-based. Prices are assumed to be in a consistent currency; no currency conversion is performed.')
+    
+    st.markdown("### Download Problem Report")
+
+    problem_products = df[df["issue_count"] > 0].copy()
+
+    if not problem_products.empty:
+        st.download_button(
+            "Download products with issues",
+            data=problem_products.to_csv(index=False).encode("utf-8-sig"),
+            file_name="catalogfix_problem_report.csv",
+            mime="text/csv"
+        )
+    else:
+        st.success("No product data issues detected.")
+

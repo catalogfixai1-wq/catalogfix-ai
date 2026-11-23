@@ -81,4 +81,29 @@ if upload is not None:
         )
     else:
         st.success("No product data issues detected.")
+        
+st.divider()
+
+st.header("Make Your Product Catalog Store-Ready")
+
+st.write(
+    "Messy supplier spreadsheets can slow down your online store. "
+    "CatalogFix AI helps you quickly identify missing product information, "
+    "duplicate SKUs, and invalid prices before importing your products."
+)
+
+st.subheader("Need help cleaning your product data?")
+
+st.write(
+    "We are currently offering introductory product data audits "
+    "for online stores. Get a clear report of issues in your catalog."
+)
+
+st.link_button(
+    "Request a Product Data Audit",
+    "mailto:catalogfixai1@gmail.com?subject=Product%20Data%20Audit%20Request"
+)
+
+st.caption("Introductory audit service. Contact us for details.")
+
 

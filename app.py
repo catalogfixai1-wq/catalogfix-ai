@@ -3,10 +3,9 @@ import pandas as pd
 import streamlit as st
 
 st.set_page_config(page_title='CatalogFix AI – Demo', page_icon='📦', layout='wide')
-st.title('📦 CatalogFix AI')
-st.caption('Product data quality checks | Prototype – no AI rewriting yet')
-st.info('Demo only. Do not upload confidential customer data. Files are processed during the session; no database is configured.')
-
+st.title("📦 CatalogFix AI")
+st.caption("Professional Product Data Quality Checker for Online Stores")
+st.info("Upload your product CSV to detect missing information, duplicate SKUs and invalid prices in seconds. Free demo – no account required.")
 sample = pd.DataFrame([
     {'sku':'A-001','title':'Blue Cotton T-Shirt','description':'100% cotton','price':'19.90'},
     {'sku':'A-002','title':'','description':'Soft everyday shirt','price':'24.90'},

@@ -559,7 +559,6 @@ st.write(
 )
 
 st.header("Plans & Pricing")
-
 free, pilot, pro = st.columns(3)
 
 with free:

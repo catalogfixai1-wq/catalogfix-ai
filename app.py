@@ -619,8 +619,12 @@ with p5:
     st.title("€599")
     st.caption("Per month - planned")
     st.markdown("""
-    - Up to 50,000 products/month
-    - Advanced AI automation
+- Individual product volume
+- No fixed standard product limit
+- Advanced AI automation
+- Custom API integration
+- Automated catalog audits
+- Priority support    - Advanced AI automation
     - Planned API integration
     - Automated catalog audits
     - Priority support

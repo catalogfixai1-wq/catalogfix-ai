@@ -607,7 +607,7 @@ with p4:
     st.title("€299")
     st.caption("Per month - planned")
     st.markdown("""
-    - Up to 10,000 products/month
+   - Up to 50,000 products/month
     - Bulk AI optimization
     - Advanced quality reports
     - Priority processing

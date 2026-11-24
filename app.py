@@ -558,63 +558,78 @@ st.write(
     "product data issues before importing supplier catalogs."
 )
 
+st.divider()
 st.header("Plans & Pricing")
-free, pilot, pro = st.columns(3)
+st.write("Choose the right plan for your business.")
 
-with free:
+p1, p2, p3, p4, p5 = st.columns(5)
 
+with p1:
     st.subheader("Free Demo")
     st.title("€0")
+    st.caption("Free forever")
+    st.markdown("""
+    - Up to 100 products
+    - Automatic error detection
+    - Quality dashboard
+    - CSV audit report
+    """)
 
-    st.markdown(
-        "- Up to 100 products\n"
-        "- Automatic error detection\n"
-        "- Quality dashboard\n"
-        "- CSV audit report"
-    )
-
-with pilot:
-
+with p2:
     st.subheader("Pilot Service")
     st.title("€49")
-    st.caption("One-time introductory offer")
-
-    st.markdown(
-        "- Up to 100 products\n"
-        "- Detailed product data review\n"
-        "- AI-assisted text suggestions\n"
-        "- Reviewed correction report"
-    )
-
+    st.caption("One-time payment")
+    st.markdown("""
+    - Up to 100 products
+    - Detailed data review
+    - AI-assisted text suggestions
+    - Reviewed correction report
+    """)
     st.link_button(
-        "Request Pilot Service",
-        "mailto:catalogfixai1@gmail.com"
-        "?subject=CatalogFix%20Pilot%20Request"
+        "Request Pilot",
+        "mailto:catalogfixai1@gmail.com?subject=Pilot%20Service"
     )
 
-with pro:
-
+with p3:
     st.subheader("Pro")
     st.title("€99")
-    st.caption("Planned monthly price")
-
-    st.markdown(
-        "- Larger product catalogs\n"
-        "- Bulk AI optimization\n"
-        "- Advanced reporting\n"
-        "- Planned premium features"
-    )
-
+    st.caption("Per month - planned")
+    st.markdown("""
+    - Up to 2,000 products/month
+    - AI text optimization
+    - Automatic data checks
+    - Corrected CSV export
+    """)
     st.info("Coming soon")
 
-    st.link_button(
-        "Join the Waiting List",
-        "mailto:catalogfixai1@gmail.com"
-        "?subject=CatalogFix%20Pro%20Interest"
-    )
+with p4:
+    st.subheader("Business")
+    st.title("€299")
+    st.caption("Per month - planned")
+    st.markdown("""
+    - Up to 10,000 products/month
+    - Bulk AI optimization
+    - Advanced quality reports
+    - Priority processing
+    """)
+    st.info("Coming soon")
 
-st.divider()
+with p5:
+    st.subheader("Enterprise")
+    st.title("€599")
+    st.caption("Per month - planned")
+    st.markdown("""
+    - Up to 50,000 products/month
+    - Advanced AI automation
+    - Planned API integration
+    - Automated catalog audits
+    - Priority support
+    """)
+    st.info("Coming soon")
 
+st.caption(
+    "Subscription features and product limits are provisional."
+)
 st.subheader("Contact CatalogFix AI")
 
 st.write("catalogfixai1@gmail.com")

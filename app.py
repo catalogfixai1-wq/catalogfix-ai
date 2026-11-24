@@ -617,17 +617,15 @@ with p4:
 with p5:
     st.subheader("Enterprise")
     st.title("€599")
-    st.caption("Per month - planned")
+    st.caption("Custom pricing available")
     st.markdown("""
-- Individual product volume
-- No fixed standard product limit
-- Advanced AI automation
-- Custom API integration
-- Automated catalog audits
-- Priority support    - Advanced AI automation
-    - Planned API integration
+    - Individual product volume
+    - No fixed standard product limit
+    - Advanced AI automation
+    - Custom API integration
     - Automated catalog audits
     - Priority support
+    - Dedicated enterprise solutions
     """)
     st.info("Coming soon")
 
